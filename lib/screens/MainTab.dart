@@ -8,7 +8,6 @@ class TabWidget extends StatelessWidget {
   }) : super(key: key);
 
   final List<int> colorCodes;
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
