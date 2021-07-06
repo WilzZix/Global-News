@@ -6,13 +6,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final List<String> entries = <String>['A', 'B', 'C'];
-  final List<int> colorCodes = <int>[600, 500, 100];
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TabWidget(colorCodes: colorCodes),
+      home: TabWidget(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
