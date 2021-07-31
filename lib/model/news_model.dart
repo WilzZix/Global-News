@@ -4,17 +4,16 @@ class NewsModel {
   List<Articles> _articles;
 
   String get status => _status;
+
   int get totalResults => _totalResults;
+
   List<Articles> get articles => _articles;
 
-  NewsModel({
-      String status, 
-      int totalResults, 
-      List<Articles> articles}){
+  NewsModel({String status, int totalResults, List<Articles> articles}) {
     _status = status;
     _totalResults = totalResults;
     _articles = articles;
-}
+  }
 
   NewsModel.fromJson(dynamic json) {
     _status = json["status"];
@@ -36,7 +35,6 @@ class NewsModel {
     }
     return map;
   }
-
 }
 
 /// source : {"id":null,"name":"TweakTown"}
@@ -54,37 +52,51 @@ class Articles {
   String _title;
   String _description;
   String _url;
-  String _urlToImage;
+  String image;
+  String country;
+  String language;
+  String _category;
   String _publishedAt;
   String _content;
 
   Source get source => _source;
+
   String get author => _author;
+
+  String get category => _category;
+
   String get title => _title;
+
   String get description => _description;
+
   String get url => _url;
-  String get urlToImage => _urlToImage;
+
+  String get urlToImage => image;
+
   String get publishedAt => _publishedAt;
+
   String get content => _content;
 
-  Articles({
-      Source source, 
-      String author, 
-      String title, 
-      String description, 
-      String url, 
-      String urlToImage, 
-      String publishedAt, 
-      String content}){
+  Articles(
+      {Source source,
+      String author,
+      String title,
+      String category,
+      String description,
+      String url,
+      String urlToImage,
+      String publishedAt,
+      String content}) {
     _source = source;
     _author = author;
     _title = title;
     _description = description;
     _url = url;
-    _urlToImage = urlToImage;
+    _category = category;
+    image = urlToImage;
     _publishedAt = publishedAt;
     _content = content;
-}
+  }
 
   Articles.fromJson(dynamic json) {
     _source = json["source"] != null ? Source.fromJson(json["source"]) : null;
@@ -92,8 +104,10 @@ class Articles {
     _title = json["title"];
     _description = json["description"];
     _url = json["url"];
-    _urlToImage = json["urlToImage"];
-    _publishedAt = json["publishedAt"];
+    _category = json['category'];
+    image = json['urlToImage'];
+    //image = json["image"];
+    _publishedAt = json["published_at"];
     _content = json["content"];
   }
 
@@ -104,14 +118,14 @@ class Articles {
     }
     map["author"] = _author;
     map["title"] = _title;
+    map['category'] = _category;
     map["description"] = _description;
     map["url"] = _url;
-    map["urlToImage"] = _urlToImage;
-    map["publishedAt"] = _publishedAt;
+    map["image"] = image;
+    map["published_at"] = _publishedAt;
     map["content"] = _content;
     return map;
   }
-
 }
 
 /// id : null
@@ -122,14 +136,13 @@ class Source {
   String _name;
 
   dynamic get id => _id;
+
   String get name => _name;
 
-  Source({
-      dynamic id, 
-      String name}){
+  Source({dynamic id, String name}) {
     _id = id;
     _name = name;
-}
+  }
 
   Source.fromJson(dynamic json) {
     _id = json["id"];
@@ -142,5 +155,4 @@ class Source {
     map["name"] = _name;
     return map;
   }
-
 }
