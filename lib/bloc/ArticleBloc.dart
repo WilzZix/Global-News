@@ -10,7 +10,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
 
   ArticleBloc({@required this.repository}) : super(null);
 
-  @override
+  // ignore: todo
   // TODO: implement initialState
   ArticleState get initialState => ArticleInitialState();
 

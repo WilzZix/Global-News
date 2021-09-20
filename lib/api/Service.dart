@@ -2,7 +2,6 @@ import 'package:global_news/api/endpoints.dart';
 import 'package:global_news/model/news_model.dart';
 import 'dart:convert' show json, utf8;
 import 'package:http/http.dart' as http;
-import 'package:convert/convert.dart';
 
 class NewsApi {
   Future<List<Articles>> getArticles() async {

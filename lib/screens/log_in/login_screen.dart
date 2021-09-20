@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'components/body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
