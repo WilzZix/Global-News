@@ -8,11 +8,16 @@ import 'package:global_news/screens/log_in/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:global_news/screens/sign_up/sign_up_screen.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({
     Key key,
   }) : super(key: key);
 
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
