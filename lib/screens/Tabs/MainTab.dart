@@ -11,7 +11,7 @@ import 'package:global_news/screens/Tabs/Category.dart';
 import 'package:global_news/screens/Tabs/TopHeadlineNews.dart';
 import 'package:http/http.dart';
 
-import 'Tabs/Saved.dart';
+import 'Saved.dart';
 
 class TabWidget extends StatefulWidget {
   @override

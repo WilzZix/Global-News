@@ -21,6 +21,7 @@ dependencies:
   equatable: ^2.0.3
   http: ^0.13.3
   connectivity: ^3.0.3
+  flutter_svg: ^0.22.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
