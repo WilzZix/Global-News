@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:global_news/api/Service.dart';
-import 'package:global_news/bloc/ArticleEvent.dart';
-import 'package:global_news/bloc/ArticleState.dart';
+import 'package:global_news/bloc/article_bloc/ArticleEvent.dart';
+import 'package:global_news/bloc/article_bloc/ArticleState.dart';
 import 'package:global_news/model/news_model.dart';
 
 class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
