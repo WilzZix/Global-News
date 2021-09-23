@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:global_news/api/Service.dart';
-import 'package:global_news/bloc/ArticleBloc.dart';
-import 'package:global_news/bloc/ArticleEvent.dart';
-import 'package:global_news/bloc/ArticleState.dart';
+import 'package:global_news/bloc/article_bloc/ArticleBloc.dart';
+import 'package:global_news/bloc/article_bloc/ArticleEvent.dart';
+import 'package:global_news/bloc/article_bloc/ArticleState.dart';
 import 'package:global_news/model/news_model.dart';
 
 class TopHeadlineNews extends StatefulWidget {

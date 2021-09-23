@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:global_news/api/Service.dart';
 import 'package:global_news/api/exceptions.dart';
-import 'package:global_news/bloc/ArticleBloc.dart';
+import 'package:global_news/bloc/article_bloc/ArticleBloc.dart';
 import 'package:global_news/dialogs/dialogs.dart';
 import 'package:global_news/managers/connection.dart';
 import 'package:global_news/model/news_model.dart';
