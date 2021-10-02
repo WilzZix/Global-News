@@ -1,12 +1,6 @@
-import 'dart:js';
-
-import 'package:global_news/screens/Tabs/MainTab.dart';
-
 import 'components/body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
 class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
