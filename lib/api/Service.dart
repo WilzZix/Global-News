@@ -7,6 +7,7 @@ class NewsApi {
   Future<List<Articles>> getArticles() async {
     var response = await http.get(Uri.parse('${Endpoints.DOMAIN}'));
     if (response.statusCode == 200) {
+      print('SUCCESS');
       var articles = json.decode(utf8.decode(response.bodyBytes));
       print(articles);
       return articles['data']

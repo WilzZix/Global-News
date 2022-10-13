@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:global_news/constants.dart';
 
@@ -23,15 +22,13 @@ class RoundedButton extends StatelessWidget {
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
-        // ignore: deprecated_member_use
-        child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          onPressed: press,
-          color: kPrimaryColor,
-          child: Text(
-            text,
-            style: TextStyle(color: textColor),
+        child: TextButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
           ),
+          onPressed: () {},
+          child: Text('TextButton'),
         ),
       ),
     );

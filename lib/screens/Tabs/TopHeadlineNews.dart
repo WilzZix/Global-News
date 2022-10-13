@@ -33,7 +33,7 @@ class _TopHeadlineNewsState extends State<TopHeadlineNews> {
               body: BlocListener<ArticleBloc, ArticleState>(
                 listener: (BuildContext context, state) {
                   if (state is ArticleErrorState) {
-                    Scaffold.of(context).showSnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(state.message),
                       ),
@@ -47,6 +47,7 @@ class _TopHeadlineNewsState extends State<TopHeadlineNews> {
                     } else if (state is ArticleLoadingState) {
                       return buildLoading();
                     } else if (state is ArticleLoadedState) {
+                      print('STATE ${state.articles}');
                       return buildArticleList(state.articles);
                     } else if (state is ArticleErrorState) {
                       return buildErrorUi(state.message);
@@ -229,7 +230,7 @@ class ArticleDetailPage extends StatelessWidget {
             margin: EdgeInsets.all(5.0),
             child: Text(article.publishedAt),
           ),
-          Text(article.content),
+          // Text(article.content),
         ],
       ),
     );
